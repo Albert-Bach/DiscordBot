@@ -1,0 +1,11 @@
+C:\Users\bach_\GreenFox\fantaStick\fantaStick\bin\Debug\netcoreapp2.0\fantaStick.deps.json
+C:\Users\bach_\GreenFox\fantaStick\fantaStick\bin\Debug\netcoreapp2.0\fantaStick.runtimeconfig.json
+C:\Users\bach_\GreenFox\fantaStick\fantaStick\bin\Debug\netcoreapp2.0\fantaStick.runtimeconfig.dev.json
+C:\Users\bach_\GreenFox\fantaStick\fantaStick\bin\Debug\netcoreapp2.0\fantaStick.dll
+C:\Users\bach_\GreenFox\fantaStick\fantaStick\obj\Debug\netcoreapp2.0\fantaStick.csprojResolveAssemblyReference.cache
+C:\Users\bach_\GreenFox\fantaStick\fantaStick\obj\Debug\netcoreapp2.0\fantaStick.csproj.CoreCompileInputs.cache
+C:\Users\bach_\GreenFox\fantaStick\fantaStick\obj\Debug\netcoreapp2.0\fantaStick.AssemblyInfoInputs.cache
+C:\Users\bach_\GreenFox\fantaStick\fantaStick\obj\Debug\netcoreapp2.0\fantaStick.AssemblyInfo.cs
+C:\Users\bach_\GreenFox\fantaStick\fantaStick\bin\Debug\netcoreapp2.0\fantaStick.pdb
+C:\Users\bach_\GreenFox\fantaStick\fantaStick\obj\Debug\netcoreapp2.0\fantaStick.dll
+C:\Users\bach_\GreenFox\fantaStick\fantaStick\obj\Debug\netcoreapp2.0\fantaStick.pdb
