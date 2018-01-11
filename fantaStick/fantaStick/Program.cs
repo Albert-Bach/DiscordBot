@@ -64,7 +64,7 @@ namespace fantaStick
 
             int argumentPosition = 0;
 
-            if (message.HasStringPrefix("tnt!", ref argumentPosition) || message.HasMentionPrefix(_client.CurrentUser, ref argumentPosition))
+            if (message.HasStringPrefix("bot ", ref argumentPosition) || message.HasMentionPrefix(_client.CurrentUser, ref argumentPosition))
             {
                 var context = new SocketCommandContext(_client, message);
 

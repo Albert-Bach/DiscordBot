@@ -11,7 +11,7 @@ namespace fantaStick.Modules
         [Command("ping")]
         public async Task PingAsync()
         {
-            await ReplyAsync("Hello World");
+            await ReplyAsync("Hello World!");
         }
     }
 }
