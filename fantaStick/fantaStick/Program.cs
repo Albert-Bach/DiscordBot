@@ -12,31 +12,31 @@ namespace fantaStick
     {
         static void Main(string[] args) => new Program().RunBotAsync().GetAwaiter().GetResult();
 
-        private DiscordSocketClient _client;
-        private CommandService _commands;
-        private IServiceProvider _services;
+        private DiscordSocketClient client;
+        private CommandService commands;
+        private IServiceProvider services;
 
         public async Task RunBotAsync()
         {
-            _client = new DiscordSocketClient();
-            _commands = new CommandService();
+            client = new DiscordSocketClient();
+            commands = new CommandService();
 
-            _services = new ServiceCollection()
-                .AddSingleton(_client)
-                .AddSingleton(_client)
+            services = new ServiceCollection()
+                .AddSingleton(client)
+                .AddSingleton(client)
                 .BuildServiceProvider();
 
             string botToken = "NDAwOTk2ODQ2MzI5MTM1MTE1.DTj4tQ.nZA3RBGv5hfVJJNygz3l-FdAUHU";
 
 
-            // event subscripitons
-            _client.Log += Log;
+            // event subscriptions
+            client.Log += Log;
 
             await RegisterCommandAsync();
 
-            await _client.LoginAsync(TokenType.Bot, botToken);
+            await client.LoginAsync(TokenType.Bot, botToken);
 
-            await _client.StartAsync();
+            await client.StartAsync();
 
             await Task.Delay(-1);
 
@@ -51,9 +51,9 @@ namespace fantaStick
 
         public async Task RegisterCommandAsync()
         {
-            _client.MessageReceived += HandleCommandAsync;
+            client.MessageReceived += HandleCommandAsync;
 
-            await _commands.AddModulesAsync(Assembly.GetEntryAssembly());
+            await commands.AddModulesAsync(Assembly.GetEntryAssembly());
         }
 
         private async Task HandleCommandAsync(SocketMessage arg)
@@ -64,11 +64,11 @@ namespace fantaStick
 
             int argumentPosition = 0;
 
-            if (message.HasStringPrefix("!", ref argumentPosition) || message.HasMentionPrefix(_client.CurrentUser, ref argumentPosition))
+            if (message.HasStringPrefix("!", ref argumentPosition) || message.HasMentionPrefix(client.CurrentUser, ref argumentPosition))
             {
-                var context = new SocketCommandContext(_client, message);
+                var context = new SocketCommandContext(client, message);
 
-                var result = await _commands.ExecuteAsync(context, argumentPosition, _services);
+                var result = await commands.ExecuteAsync(context, argumentPosition, services);
 
                 if (!result.IsSuccess)
                     Console.WriteLine(result.ErrorReason);
